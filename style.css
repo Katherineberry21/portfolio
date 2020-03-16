@@ -1,0 +1,434 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: lightblue;
+    font-size: 15px;
+    padding: 0;
+}
+
+a:link{
+    color:#0000ff;
+}
+
+.skip {
+    position: absolute;
+    left: -200px;
+}
+
+.skip:focus{
+    left: 0;
+    top: 0;
+    background-color: black;
+}
+
+
+a:visited{
+    color: #6A0DAD;
+}
+
+.current a{    
+    color: #1F1F1F;
+    text-decoration: underline;
+    text-decoration-style: wavy;
+}
+
+h1 {
+    Color: black;
+    font-family: 'Times New Roman', serif;
+    text-align: center;
+    text-shadow: 5px 5px 5px white;
+}
+
+ h2 {
+     color: black;
+     font-family: 'Times New Roman', serif;
+     text-align: center;
+     border: 5px solid black;
+ }
+
+ h3 {
+     color: black;
+     font-family: 'Times New Roman', serif;
+     text-decoration-line: underline;
+     text-align: center;
+ }
+
+ nav li {
+     display: block;
+     padding-right: 20px;
+ }
+
+ .container{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto;
+    grid-row-gap: 15px;
+ }  
+
+ .si, #about2, #about3, #about4 {
+     grid-column: 2;
+     text-align: center;
+ }
+ 
+ .silogo-image, .magnilogo-image, .revivelogo-image, .gartnerlogo-image {
+     max-height: 700px;
+     overflow: hidden;
+     grid-column: 1;
+ }
+
+ .si, .silogo-image{
+     grid-row: 2 / span 1;
+ }
+
+ #about2, .magnilogo-image{
+     grid-row: 3 / span 1;
+ }
+
+ #about3, .revivelogo-image{
+     grid-row: 4 / span 1;
+ }
+
+ #about4, .gartnerlogo-image{
+     grid-row: 5 / span 1;
+ }
+
+ .container2{
+     display: flex;
+     flex-direction: row;
+     flex-wrap:wrap;
+     justify-content: space-between;
+     margin-left: 15%;
+     margin-right: 15%;
+     padding: 20px;
+
+ }
+
+ .mwbb-image{
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+ }
+
+.container3{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: space-evenly;   
+}
+
+.family-image {
+    grid-column: 1;
+}
+
+.family2-image {
+    grid-column: 2;
+}
+
+.container4{
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    justify-content: space-evenly;
+}
+
+.friends-image{
+    grid-column: 1;
+}
+
+.friends2-image{
+    grid-column: 2;
+}
+
+.overall2 {
+    background-color: lightblue;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .videoflip {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .overall2:hover .videoflip {
+    transform: rotateX(180deg);
+  }
+  
+  .friends3-image, .friends-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  .friends3-image {
+    background-color: lightblue;
+    color: black;
+  }
+  
+  .friends-video {
+    background-color:black;
+    color: white;
+    transform: rotateX(180deg);
+  }
+
+ 
+ .boston-image, .office-image, .twitter-image, .bighouse-image{
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     max-width: fit-content;
+     max-height: fit-content;
+ }
+
+ .funfacts {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+ }
+
+ .container5{
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+
+ fieldset{
+     border-radius: 5px;
+     border-collapse: separate;
+     border-radius: 10px;
+ }
+
+ legend{
+     text-align: center;
+     font-size: xx-large;
+ }
+
+ fieldset div{
+     margin-left: 10%;
+     margin-right: 10%;
+     padding: 1%;
+ }
+
+ .contact{
+     display: grid;
+     grid-template-columns: auto;
+     grid-row-gap: 5px;
+ }
+
+ .flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; 
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+
+  .flip-card:hover .flip-card-inner{
+      transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  .flip-card-back {
+    background-color:black;
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+  .flip-card:focus .flip-card-inner{
+      transform: rotateY(180deg);
+    }
+    
+  .flip-card:focus .flip-card-back{
+      transform: rotateY(180deg);
+    }
+
+ a.linkedin {
+    line-height: 0;
+    font-size: 0;
+ }
+
+ .gallery{
+     display: grid;
+     grid-template-columns: auto;
+     grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .gallery12-image{
+     align-self: center;
+     justify-content: center;
+ }
+
+ .gallery1-image, .gallery2-image, .gallery3-image, .gallery4-image, .gallery5-image, .gallery6-image, .gallery7-image, .gallery8-image,
+ .gallery9-image, .gallery10-image, .gallery11-image{
+     align-items: center;
+     justify-content: center;
+ }
+
+ .gallery9-image, .gallery10-image, .gallery6-image, .gallery1-image, .gallery4-image, .gallery7-image {
+     filter: saturate(0%)
+ }
+
+ @keyframes bounce {
+     0% {
+         transform: scale(0.1);
+         opacity: 0;
+     }
+     50% {
+         transform: scale(0.5);
+         opacity: 1;
+     }
+     100% {
+         transform: scale(1);
+     }
+ }
+
+ .gallery{
+     animation-name: bounce;
+     animation-duration: 1s;
+ }
+
+ .silogo-image, .magnilogo-image, .revivelogo-image, .gartnerlogo-image {
+     animation-name: bounce;
+     animation-duration: 2s;
+     animation-timing-function: ease-in-out;
+ }
+
+
+ footer{
+     bottom: 0;
+     background-color: black;
+     color: white;
+     padding: 5px;
+     text-align: center;
+ }
+
+ footer > p{
+     color: white;
+ }
+
+ @media screen and (min-width: 0px){
+     .gallery{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto;
+        align-items: center;
+        justify-content: center;
+     }
+
+     nav li {
+         text-align: center;
+     }
+ }
+
+ @media screen and (min-width: 501px){
+     .gallery {
+         grid-template-columns: auto auto;
+         grid-template-rows: auto auto auto auto auto auto;
+     }
+
+     nav li {
+         text-align: left;
+     }
+
+     .container5{
+         justify-content: space-evenly;
+     }
+
+     h1{
+         text-align: right;
+     }
+     .funfacts {
+         justify-content: space-between;
+     }
+ }
+
+ @media all and (min-width: 888px) {
+     .gallery {
+         grid-template-columns: auto auto auto;
+         grid-template-rows: auto auto auto auto;
+     }
+
+     nav li {
+         display: inline;
+         text-align: left;
+     }
+
+     .funfacts {
+         justify-content: space-evenly;
+     }
+         
+    .silogo-image {
+            border-radius: 50%;
+            max-width: min-content;
+            max-height: min-content;
+        }
+        
+        .magnilogo-image {
+            border-radius: 50%;
+            max-width: min-content;
+            max-height: min-content;
+        }
+        
+        .revivelogo-image {
+            border-radius: 50%;
+            max-width: min-content;
+            max-height: min-content;
+        }
+        
+        .gartnerlogo-image {
+            border-radius: 50%;
+            max-width: min-content;
+            max-height: min-content;
+        }
+ }
+
+  .parallax-wrapper{
+    background-attachment: fixed;      
+    background-position: center;  
+    background-repeat: no-repeat; 
+    background-size: cover;       
+    color: black;
+    height: 300px;                
+    background-image: url("images/data.jpg");
+    background-color: black;
+  }
+
+  
+
+ 
+
