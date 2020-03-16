@@ -74,7 +74,7 @@ h1 {
  
  .silogo-image, .magnilogo-image, .revivelogo-image, .gartnerlogo-image {
      max-height: 700px;
-     overflow: hidden;
+     /*overflow: hidden;*/
      grid-column: 1;
  }
 
